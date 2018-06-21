@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="produtos_itens">
+
+        <item>Açúcar</item>
+        <item>Chocolate</item>
+        <item>Carne</item>
+        <item>Peixe</item>
+        <item>Maçã</item>
+        <item>Abacaxi</item>
+    </string-array>
+
+</resources>
