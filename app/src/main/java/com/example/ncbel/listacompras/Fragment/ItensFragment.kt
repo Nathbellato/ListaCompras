@@ -1,6 +1,7 @@
 package com.example.ncbel.listacompras.Fragment
 
 
+import android.graphics.Movie
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -9,21 +10,17 @@ import android.view.ViewGroup
 import com.example.ncbel.listacompras.R
 
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- *
- */
 class ItensFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+    override fun onCreateView(inflater: LayoutInflater,
+                              container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_itens, container, false)
+
+
+        val view = inflater.inflate(R.layout.item, container, false)
+
+
+        return view
     }
 
 
