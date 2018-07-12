@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import kotlinx.android.synthetic.main.item.view.*
+import kotlinx.android.synthetic.main.fragment_lista.view.*
 
 class ListaTransacoesAdapter(transacoes: List<Transacao>,
                              context: Context) : BaseAdapter() {
@@ -16,7 +16,7 @@ class ListaTransacoesAdapter(transacoes: List<Transacao>,
 
     override fun getView(posicao: Int, view: View?, parent: ViewGroup?): View {
         val viewCriada = LayoutInflater.from(context)
-                .inflate(R.layout.item, parent, false)
+                .inflate(R.layout.fragment_lista, parent, false)
 
         val transacao = transacoes[posicao]
 

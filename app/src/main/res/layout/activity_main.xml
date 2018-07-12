@@ -13,10 +13,11 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <include
-            android:id="@+id/lista_transacoes_resumo"
-            layout="@layout/resumo_card"
-            android:layout_height="52dp" />
+        <TextView
+            android:id="@+id/message"
+            android:text="@string/title_lista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <ListView
             android:id="@+id/lista_transacoes_listview"
@@ -27,20 +28,16 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
 
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/nav_lista"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/cardview_light_background"
-            app:menu="@menu/nav_lista">
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:background="@color/cardview_light_background"
+        app:menu="@menu/nav_lista">
 
-        </android.support.design.widget.BottomNavigationView>
-    </LinearLayout>
+    </android.support.design.widget.BottomNavigationView>
+
 
 </RelativeLayout>

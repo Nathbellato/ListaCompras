@@ -14,13 +14,16 @@ class MainActivity : AppCompatActivity() {
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when(item.itemId){
-            id.nav_lista -> {
+            id.nav_minhalista -> {
+                message.text = "Minha Lista"
                 createFragmentLista()
                 return@OnNavigationItemSelectedListener true
             }
              id.nav_item -> {
+                 message.setText("Item")
                  createFragmentItens()
                 return@OnNavigationItemSelectedListener true
+
 
             }
         }
@@ -33,16 +36,12 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        createFragmentLista()
-
-
-
-        val transacoes = listOf(Transacao(BigDecimal("200.0"),categoria = "carnes"),
-                Transacao(BigDecimal("100.0") ,categoria = "Legumes"))
+        val transacoes = listOf(Transacao(BigDecimal("200.0"),categoria = "carnes"))
 
        // lista_transacoes_listview.adapter = ListaTransacoesAdapter(transacoes, this)
-        nav_lista.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
+        createFragmentLista()
+     navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
 
     }
@@ -51,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         val transation = manager.beginTransaction()
         val fragment = ListaFragment()
-        transation.replace(R.id.nav_lista,fragment)
+        transation.replace(R.id.nav_minhalista,fragment)
         transation.addToBackStack(null)
         transation.commit()
     }
